@@ -10,10 +10,10 @@
 
     <style>
         #panorama {
-            width: 1400px;
-            height: 800px;
+            width: 50rem;
+            height: 40rem;
         }
-        
+
         #controls {
         position: absolute;
         bottom: 0;
@@ -83,7 +83,7 @@
 
 
 <script>
-pannellum.viewer('panorama', {   
+viewer = pannellum.viewer('panorama', {   
     
     "default": {
         "firstScene": "start",
@@ -93,7 +93,7 @@ pannellum.viewer('panorama', {
 
     "scenes": {
         "start": {
-            "hfov": 110,
+            "hfov": 120,
             "pitch": -4.76,
             "yaw": 65.88,
             "type": "equirectangular",
@@ -104,18 +104,1108 @@ pannellum.viewer('panorama', {
                     "yaw": 65.88,
                     "type": "scene",
                     "text": "Študijné oddelenie",
-                    "sceneId": "studijneodd",
-                    
+                    "sceneId": "studijneodd"
+                },
+                {
+                    "pitch": -8.7,
+                    "yaw": 10.3,
+                    "type": "scene",
+                    "text": "Katedra elektrotechniky automatizácie a informatiky",
+                    "sceneId": "keaif1"
+                },
+                {
+                    "pitch": -4.66,
+                    "yaw": 105.83,
+                    "type": "scene",
+                    "text": "Katedra zariadení stavieb a bezpečnostnej techniky",
+                    "sceneId": "kzsb"
+                },
+                {
+                    "pitch": -9.79,
+                    "yaw": 18.73,
+                    "type": "scene",
+                    "text": "Katedra kvality a strojárskych technológií",
+                    "sceneId": "kkstp"
                 }
             ]
         },
         "studijneodd": {
             "hfov": 110,
-            "yaw": -57.9,
-            "pitch": -8,
+            "yaw": -80.48,
+            "pitch": -4.64,
             "type": "equirectangular",
             "panorama": "images/build/foto-002.jpg",
-            
+            "hotSpots":[
+                {
+                    "yaw": -80.48,
+                    "pitch": -4.64,
+                    "type": "scene",
+                    "sceneId": "mfcam"
+                }
+            ]
+        },
+        "mfcam":{
+            "hfov": 110,
+            "yaw": 86.48,
+            "pitch": -2.4,
+            "type": "equirectangular",
+            "panorama": "images/build/MFCAM.jpg",
+            "hotSpots": [
+                {
+                    "yaw": -92.78,
+                    "pitch": -4.2,
+                    "type": "scene",
+                    "text": "Študijné oddelenie",
+                    "sceneId": "studijneodd"
+                },
+                {
+                    "yaw": 81.02,
+                    "pitch":   -1.46,
+                    "type": "scene",
+                    "sceneId": "mf13"            
+                }
+            ]
+        },
+        "mf13":  {
+            "hfov": 110,
+            "yaw": -113.46,
+            "pitch": -1.05,
+            "type": "equirectangular",
+            "panorama": "images/build/mf13.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.29,
+                    "yaw": -92.3,
+                    "type": "scene",
+                    "text": "Schodište",
+                    "sceneId": "schodiste1",
+                },
+                {
+                    "pitch": -6.66,
+                    "yaw": -165.85,
+                    "type": "scene",
+                    "text": "Učebňa MF13",
+                    "sceneId": "mf13i",
+                },
+                {
+                    "pitch": -4,
+                    "yaw": 100.1,
+                    "type": "scene",
+                    "sceneId": "mfcam",
+                }
+            ]
+        },
+        "mf13i":{
+            "hfov": 110,
+            "yaw": -2.19,
+            "pitch": -1.74,
+            "type": "equirectangular",
+            "panorama": "images/build/mf13i.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.07,
+                    "yaw": 99.67,
+                    "type": "scene",
+                    "sceneId": "mf13",
+                }
+            ]
+        },
+        "schodiste1":{
+            "hfov": 120,
+            "yaw": 86.48,
+            "pitch": -2.4,
+            "type": "equirectangular",
+            "panorama": "images/build/schodiste1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.95,
+                    "yaw": -125.61,
+                    "type": "scene",
+                    "sceneId": "mf13",
+                },
+                {
+                    "pitch": -1.29,
+                    "yaw": 33.5,
+                    "type": "scene",                    
+                    "sceneId": "mf14"
+                },
+                {
+                    "pitch": -16.08,
+                    "yaw": 66.8,
+                    "type": "scene",
+                    "sceneId": "garaz1",
+                },
+                {
+                    "pitch": -16.4,
+                    "yaw": 70.26,
+                    "type": "scene",
+                    "sceneId": "garaz2",
+                },
+                {
+                    "pitch": 3.13,
+                    "yaw": 96.5,
+                    "type": "scene",
+                    "sceneId": "schodiste3",
+                }
+            ]
+        },
+        "mf14":{
+            "hfov": 110,
+            "yaw": 86.48,
+            "pitch": -2.4,
+            "type": "equirectangular",
+            "panorama": "images/build/mf14.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2.17,
+                    "yaw": -90.31,
+                    "type": "scene",
+                    "text": "Schodište",                    
+                    "sceneId": "schodiste1"
+                },
+                {
+                    "pitch": -1.49,
+                    "yaw": 80.2,
+                    "type": "scene",                    
+                    "sceneId": "mf15"
+                }
+            ] 
+        },
+        "mf15": {
+            "hfov": 110,
+            "yaw": 86.48,
+            "pitch": -2.4,
+            "type": "equirectangular",
+            "panorama": "images/build/mf15.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.78,
+                    "yaw": -85.24,
+                    "type": "scene",                    
+                    "sceneId": "mf14"
+                },
+                {
+                    "pitch": -2.54,
+                    "yaw": -0.21,
+                    "type": "scene",                    
+                    "sceneId": "mf15i"
+                },
+                {
+                    "pitch": -3.02,
+                    "yaw": 65.24,
+                    "type": "scene",                    
+                    "sceneId": "mf16i"
+                },
+                {
+                    "pitch": -1.81,
+                    "yaw": 85.02,
+                    "type": "scene",
+                    "text": "Návrat na začiatok",
+                    "sceneId": "start"
+                }
+            ]
+        },
+        "mf15i": {
+            "hfov": 110,
+            "yaw": 32.5,
+            "pitch": 0.4,
+            "type": "equirectangular",
+            "panorama": "images/build/mf15i.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2.25,
+                    "yaw": 50.33,
+                    "type": "scene",                    
+                    "sceneId": "mf15"
+                }
+            ]
+        },
+        "mf16i": {
+            "hfov": 110,
+            "yaw": 18.31,
+            "pitch": 1.08,
+            "type": "equirectangular",
+            "panorama": "images/build/mf16i.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1.63,
+                    "yaw": -23.24,
+                    "type": "scene",                    
+                    "sceneId": "mf15"
+                },
+            ]
+        },
+        "garaz1":{
+            "hfov": 120,
+            "yaw": -144.29,
+            "pitch": -12.13,
+            "type": "equirectangular",
+            "panorama": "images/build/garaz1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4.48,
+                    "yaw": -174.35,
+                    "type": "scene",                    
+                    "sceneId": "schodiste1"
+                }
+            ]
+        },
+        "garaz2":{
+            "hfov": 120,
+            "yaw": 38.98,
+            "pitch": -4.48,
+            "type": "equirectangular",
+            "panorama": "images/build/garaz2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -6.7,
+                    "yaw": 154.96,
+                    "type": "scene",                    
+                    "sceneId": "schodiste1"
+                }
+            ]
+        },
+        "kzsb":{
+            "hfov": 110,
+            "yaw": -173.16,
+            "pitch": -2.58,
+            "type": "equirectangular",
+            "panorama": "images/build/KZSB.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.96,
+                    "yaw": -5.29,
+                    "type": "scene",
+                    "text": "Návrat na začiatok",
+                    "sceneId": "start"
+                },
+                {
+                    "pitch": -2.58,
+                    "yaw": -179.6,
+                    "type": "scene",
+                    "sceneId": "kzsb2"
+                }
+            ]
+        },
+        "kzsb2":{
+            "hfov": 110,
+            "yaw": 95.98,
+            "pitch": -5.82,
+            "type": "equirectangular",
+            "panorama": "images/build/KZSB2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4.52,
+                    "yaw": -94.78,
+                    "type": "scene",
+                    "sceneId": "kzsb"
+                },
+                {
+                    "pitch": -0.93,
+                    "yaw": 88.23,
+                    "type": "scene",
+                    "sceneId": "kzsb3"
+                }
+            ]
+        },
+        "kzsb3":{
+            "hfov": 110,
+            "yaw": 97.93,
+            "pitch": -7.5,
+            "type": "equirectangular",
+            "panorama": "images/build/KZSB3.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.04,
+                    "yaw": -90.96,
+                    "type": "scene",
+                    "sceneId": "kzsb2"
+                },
+                {
+                    "pitch": -2.83,
+                    "yaw": 95.2,
+                    "type": "scene",
+                    "sceneId": "kzsb4"
+                }
+            ]
+        },
+        "kzsb4":{
+            "hfov": 110,
+            "yaw": 97.72,
+            "pitch": -5.68,
+            "type": "equirectangular",
+            "panorama": "images/build/KZSB4.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2.52,
+                    "yaw": 92.84,
+                    "type": "scene",
+                    "sceneId": "kzsb5"
+                },
+                {
+                    "pitch": -2.18,
+                    "yaw": -92.45,
+                    "type": "scene",
+                    "sceneId": "kzsb3"
+                }
+            ]
+        },
+        "kzsb5":{
+            "hfov": 110,
+            "yaw": 97.72,
+            "pitch": -5.68,
+            "type": "equirectangular",
+            "panorama": "images/build/KZSB5.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.74,
+                    "yaw": 88.75,
+                    "type": "scene",
+                    "sceneId": "kzsb6"
+                },
+                {
+                    "pitch": -1.73,
+                    "yaw": -93.11,
+                    "type": "scene",
+                    "sceneId": "kzsb4"
+                }
+            ]
+        },
+        "kzsb6":{
+            "hfov": 110,
+            "yaw": 86.27,
+            "pitch": -3.93,
+            "type": "equirectangular",
+            "panorama": "images/build/KZSB6.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.74,
+                    "yaw": 88.75,
+                    "type": "scene",
+                    "sceneId": "kzsb7"
+                },
+                {
+                    "pitch": -1.79,
+                    "yaw": -95.94,
+                    "type": "scene",
+                    "sceneId": "kzsb5"
+                }
+            ]
+        },
+        "kzsb7":{
+            "hfov": 110,
+            "yaw": 89.82,
+            "pitch": -3.66,
+            "type": "equirectangular",
+            "panorama": "images/build/KZSB7.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.66,
+                    "yaw": 89.82,
+                    "type": "scene",
+                    "text": "Návrat na začiatok",
+                    "sceneId": "start"
+                },
+                {
+                    "pitch": -0.73,
+                    "yaw": -88.73,
+                    "type": "scene",
+                    "text": "Návrat na začiatok",
+                    "sceneId": "start"
+                }
+            ]
+        },
+        "keaif1":{
+            "hfov": 110,
+            "yaw": 89.82,
+            "pitch": -3.66,
+            "type": "equirectangular",
+            "panorama": "images/build/keaif1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.67,
+                    "yaw": 93.69,
+                    "type": "scene",
+                    "sceneId": "keaif2"
+                },
+                {
+                    "pitch": -0.73,
+                    "yaw": -88.73,
+                    "type": "scene",
+                    "text": "1. Poschodie",
+                    "sceneId": "start"
+                }
+            ]
+        },
+        "keaif2":{
+            "hfov": 110,
+            "yaw": 89.82,
+            "pitch": -3.66,
+            "type": "equirectangular",
+            "panorama": "images/build/keaif2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.73,
+                    "yaw": -88.73,
+                    "type": "scene",
+                    "sceneId": "keaif1"
+                },
+                {
+                    "pitch": -0.67,
+                    "yaw": 90.69,
+                    "type": "scene",
+                    "sceneId": "keaif3"
+                }
+            ]
+        },
+        "keaif3":{
+            "hfov": 110,
+            "yaw": 93.55,
+            "pitch": -3.15,
+            "type": "equirectangular",
+            "panorama": "images/build/keaif3.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.73,
+                    "yaw": -88.73,
+                    "type": "scene",
+                    "sceneId": "keaif2"
+                },
+                {
+                    "pitch": -0.67,
+                    "yaw": 93.69,
+                    "type": "scene",
+                    "sceneId": "keaif4"
+                }
+            ]
+        },
+        "keaif4":{
+            "hfov": 110,
+            "yaw": 95,
+            "pitch": -1.32,
+            "type": "equirectangular",
+            "panorama": "images/build/keaif4.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.73,
+                    "yaw": -88.73,
+                    "type": "scene",
+                    "sceneId": "keaif3"
+                },
+                {
+                    "pitch": -0.67,
+                    "yaw": 93.69,
+                    "type": "scene",
+                    "sceneId": "keaif5"
+                }
+            ]
+        },
+        "keaif5": {
+            "hfov": 110,
+            "yaw": 95,
+            "pitch": -1.32,
+            "type": "equirectangular",
+            "panorama": "images/build/keaif7.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.71,
+                    "yaw": -83.43,
+                    "type": "scene",
+                    "sceneId": "keaif4"
+                },
+                {
+                    "pitch": -1.93,
+                    "yaw": 97.75,
+                    "type": "scene",
+                    "sceneId": "keaif6"
+                }
+            ]
+        },
+        "keaif6": {
+            "hfov": 110,
+            "yaw": 91.93,
+            "pitch": -3.32,
+            "type": "equirectangular",
+            "panorama": "images/build/keaif11.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.4,
+                    "yaw": -89.340,
+                    "type": "scene",
+                    "sceneId": "keaif5"
+                },
+                {
+                    "pitch": -3.33,
+                    "yaw": 91.93,
+                    "type": "scene",
+                    "sceneId": "keaif7"
+                }
+            ]
+        },
+        "keaif7": {
+            "hfov": 110,
+            "yaw": 89.9,
+            "pitch": -2.83,
+            "type": "equirectangular",
+            "panorama": "images/build/keaif12.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.43,
+                    "yaw": -90.86,
+                    "type": "scene",
+                    "sceneId": "keaif6"
+                },
+                {
+                    "pitch": -2.83,
+                    "yaw": 89.9,
+                    "type": "scene",
+                    "sceneId": "keaif8"
+                }
+            ]
+        },
+        "keaif8": {
+            "hfov": 120,
+            "yaw": 87.54,
+            "pitch": -4.82,
+            "type": "equirectangular",
+            "panorama": "images/build/keaif14.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.52,
+                    "yaw": -95.2,
+                    "type": "scene",
+                    "sceneId": "keaif7"
+                },
+                {
+                    "pitch": -0.57,
+                    "yaw": 87.82,
+                    "type": "scene",
+                    "sceneId": "start"
+                }
+            ]
+        },
+        "kkstp":{
+            "hfov": 120,
+            "yaw": -37.43,
+            "pitch": -6.56,
+            "type": "equirectangular",
+            "panorama": "images/build/kkstp.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -18.79,
+                    "yaw": -114.09,
+                    "type": "scene",
+                    "text": "Katedra elektrotechniky automatizácie a informatiky",
+                    "sceneId": "keaif1"
+                },
+                {
+                    "pitch": -12.68,
+                    "yaw": -90.84,
+                    "type": "scene",
+                    "sceneId": "ksp"
+                },
+                {
+                    "pitch": -3.79,
+                    "yaw": -66.2,
+                    "type": "scene",
+                    "sceneId": "mf30"
+                },
+                {
+                    "pitch": -5.01,
+                    "yaw": 17.63,
+                    "type": "scene",
+                    "sceneId": "kkst1"
+                }
+            ]
+        },
+        "kkst1":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/kkst1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4.66,
+                    "yaw": 87.47,
+                    "type": "scene",
+                    "sceneId": "kkstp"
+                },
+                {
+                    "yaw": -91.95,
+                    "pitch": -2.26,
+                    "type": "scene",
+                    "sceneId": "kkst2"
+                }
+            ]
+        },
+        "kkst2":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/kkst3.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4.66,
+                    "yaw": 87.47,
+                    "type": "scene",
+                    "sceneId": "kkst1"
+                },
+                {
+                    "yaw": -91.95,
+                    "pitch": -2.26,
+                    "type": "scene",
+                    "sceneId": "kkst3"
+                }
+            ]
+        },
+        "kkst3":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/kkst5.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1.35,
+                    "yaw": 88.26,
+                    "type": "scene",
+                    "sceneId": "kkst2"
+                },
+                {
+                    "yaw": -91.95,
+                    "pitch": -2.26,
+                    "type": "scene",
+                    "sceneId": "kkst4"
+                }
+            ]
+        },
+        "kkst4":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/kkst8.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1.35,
+                    "yaw": 88.89,
+                    "type": "scene",
+                    "sceneId": "kkst3"
+                },
+                {
+                    "yaw": -91.95,
+                    "pitch": -2.26,
+                    "type": "scene",
+                    "sceneId": "kkst5"
+                }
+            ]
+        },
+        "kkst5":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/kkst9.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.85,
+                    "yaw": 89.35,
+                    "type": "scene",
+                    "sceneId": "kkst4"
+                },
+                {
+                    "yaw": -88.93,
+                    "pitch": -2.03,
+                    "type": "scene",
+                    "sceneId": "kkst6"
+                }
+            ]
+        },
+        "kkst6":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/kkst11.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4.66,
+                    "yaw": 87.47,
+                    "type": "scene",
+                    "sceneId": "kkst5"
+                },
+                {
+                    "yaw": -91.95,
+                    "pitch": -2.26,
+                    "type": "scene",
+                    "sceneId": "kkst7"
+                }
+            ]
+        },
+        "kkst7":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/kkst12.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.59,
+                    "yaw": 91.41,
+                    "type": "scene",
+                    "sceneId": "kkst6"
+                },
+                {
+                    "yaw": -91.95,
+                    "pitch": -2.26,
+                    "type": "scene",
+                    "sceneId": "kkstp"
+                }
+            ]
+        },
+        "mf30":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/mf30.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -8.27,
+                    "yaw": 93.74,
+                    "type": "scene",
+                    "sceneId": "kkstp"
+                },
+                {
+                    "yaw": -93.15,
+                    "pitch": -1.77,
+                    "type": "scene",
+                    "sceneId": "mf31"
+                }
+            ]
+        },
+        "mf31":{
+            "hfov": 120,
+            "yaw": 87.51,
+            "pitch": -2.47,
+            "type": "equirectangular",
+            "panorama": "images/build/mf31.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2.47,
+                    "yaw": 87.51,
+                    "type": "scene",
+                    "sceneId": "mf32"
+                },
+                {
+                    "yaw": -82.77,
+                    "pitch": -2.78,
+                    "type": "scene",
+                    "sceneId": "mf30"
+                }
+            ]
+        },
+        "mf32":{
+            "hfov": 120,
+            "yaw": 86.43,
+            "pitch": -3.66,
+            "type": "equirectangular",
+            "panorama": "images/build/mf32.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.66,
+                    "yaw": 86.43,
+                    "type": "scene",
+                    "sceneId": "schodiste3"
+                },
+                {
+                    "yaw": -83.39,
+                    "pitch": -1.68,
+                    "type": "scene",
+                    "sceneId": "mf31"
+                }
+            ]
+        },
+        "schodiste3":{
+            "hfov": 120,
+            "yaw": 133.28,
+            "pitch": -11.61,
+            "type": "equirectangular",
+            "panorama": "images/build/schodiste3.jpg",
+            "hotSpots": [
+                {
+                    "yaw": 85.72,
+                    "pitch": -4.96,
+                    "type": "scene",
+                    "sceneId": "mf33"
+                },
+                {
+                    "yaw": -89.31,
+                    "pitch": -7.43,
+                    "type": "scene",
+                    "sceneId": "mf32"
+                },
+                {
+                    "yaw": 139.83,
+                    "pitch": 1.77,
+                    "type": "scene",
+                    "sceneId": "schodiste4"
+                },
+                {
+                    "yaw": 123.86,
+                    "pitch": -22.05,
+                    "type": "scene",
+                    "sceneId": "schodiste1"
+                }
+
+            ]
+        },
+        "mf33":{
+            "hfov": 120,
+            "yaw": 95.31,
+            "pitch": -6.09,
+            "type": "equirectangular",
+            "panorama": "images/build/mf33.jpg",
+            "hotSpots": [
+                {
+                    "yaw": 82.43,
+                    "pitch": -3.32,
+                    "type": "scene",
+                    "sceneId": "mf34"
+                },
+                {
+                    "yaw": -88.39,
+                    "pitch": -4.08,
+                    "type": "scene",
+                    "sceneId": "schodiste3"
+                }
+            ]
+        },
+        "mf34":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/mf34.jpg",
+            "hotSpots": [
+                {
+                    "yaw": 98.35,
+                    "pitch": -2.24,
+                    "type": "scene",
+                    "sceneId": "mf33"
+                },
+                {
+                    "yaw": -93.4,
+                    "pitch": -2.05,
+                    "type": "scene",
+                    "sceneId": "kkstp"
+                }
+            ]
+        },
+        "ksp":{
+            "hfov": 120,
+            "yaw": 51.36,
+            "pitch": -6.09,
+            "type": "equirectangular",
+            "panorama": "images/build/ksp.jpg",
+            "hotSpots": [
+                {
+                    "yaw": -5.15,
+                    "pitch": -4.92,
+                    "type": "scene",
+                    "sceneId": "kkstp"
+                },
+                {
+                    "yaw": 23.27,
+                    "pitch": -3.24,
+                    "type": "scene",
+                    "sceneId": "mf41"
+                },
+                {
+                    "yaw": 107.7,
+                    "pitch": -5.43,
+                    "type": "scene",
+                    "sceneId": "ksp1"
+                }
+            ]
+        },
+        "ksp1":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/ksp1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1,
+                    "yaw": -92.13,
+                    "type": "scene",
+                    "sceneId": "ksp2"
+                },
+                {
+                    "pitch": -3.18,
+                    "yaw": 85.36,
+                    "type": "scene",
+                    "sceneId": "ksp"
+                }
+            ]
+        },
+        "ksp2":{
+            "hfov": 120,
+            "yaw": -88.46,
+            "pitch": -5.08,
+            "type": "equirectangular",
+            "panorama": "images/build/ksp3.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.92,
+                    "yaw": -88.45,
+                    "type": "scene",
+                    "sceneId": "ksp3"
+                },
+                {
+                    "pitch": -2.05,
+                    "yaw": 90.02,
+                    "type": "scene",
+                    "sceneId": "ksp1"
+                }
+            ]
+        },
+        "ksp3":{
+            "hfov": 120,
+            "yaw": -91.95,
+            "pitch": -2.26,
+            "type": "equirectangular",
+            "panorama": "images/build/ksp6.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2.46,
+                    "yaw": -87.56,
+                    "type": "scene",
+                    "sceneId": "ksp4"
+                },
+                {
+                    "pitch": -0.93,
+                    "yaw": 91.82,
+                    "type": "scene",
+                    "sceneId": "ksp2"
+                }
+            ]
+        },
+        "ksp4":{
+            "hfov": 120,
+            "yaw": -87.04,
+            "pitch": -3.04,
+            "type": "equirectangular",
+            "panorama": "images/build/ksp7.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.04,
+                    "yaw": -87.04,
+                    "type": "scene",
+                    "sceneId": "ksp5"
+                },
+                {
+                    "pitch": -0.72,
+                    "yaw": 93.86,
+                    "type": "scene",
+                    "sceneId": "ksp3"
+                }
+            ]
+        },
+        "ksp5":{
+            "hfov": 120,
+            "yaw": -101.95,
+            "pitch": -9.76,
+            "type": "equirectangular",
+            "panorama": "images/build/ksp8.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4.18,
+                    "yaw": -84.85,
+                    "type": "scene",
+                    "sceneId": "ksp"
+                },
+                {
+                    "pitch": -0.57,
+                    "yaw": 94.09,
+                    "type": "scene",
+                    "sceneId": "ksp4"
+                }
+            ]
+        },
+        "mf41":{
+            "hfov": 120,
+            "yaw": 94.99,
+            "pitch": -9.9,
+            "type": "equirectangular",
+            "panorama": "images/build/mf41.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3.22,
+                    "yaw": -81.88,
+                    "type": "scene",
+                    "sceneId": "ksp"
+                },
+                {
+                    "pitch": -1.48,
+                    "yaw": 84.7,
+                    "type": "scene",
+                    "sceneId": "mf42"
+                }
+            ]
+        },
+        "mf42":{
+            "hfov": 120,
+            "yaw": 72.06,
+            "pitch": -10.43,
+            "type": "equirectangular",
+            "panorama": "images/build/mf42.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1.17,
+                    "yaw": -83.02,
+                    "type": "scene",
+                    "sceneId": "mf41"
+                },
+                {
+                    "pitch": -2.71,
+                    "yaw": 84.45,
+                    "type": "scene",
+                    "sceneId": "schodiste4"
+                }
+            ]
+        },
+        "schodiste4":{
+            "hfov": 120,
+            "yaw": -133.61,
+            "pitch": -16.16,
+            "type": "equirectangular",
+            "panorama": "images/build/schodiste4.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4.33,
+                    "yaw": 167.51,
+                    "type": "scene",
+                    "text": "Návrat na začiatok 4. poschodia",
+                    "sceneId": "ksp"
+                },
+                {
+                    "pitch": -3.06,
+                    "yaw": 2.89,
+                    "type": "scene",
+                    "sceneId": "mf42"
+                },
+                {
+                    "pitch": -25.39,
+                    "yaw": -149.6,
+                    "type": "scene",
+                    "sceneId": "schodiste3"
+                }
+            ]
+    
         }
     },
 });
