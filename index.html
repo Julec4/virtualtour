@@ -9,6 +9,10 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 
     <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
         #panorama {
             width: 50rem;
             height: 40rem;
@@ -66,6 +70,16 @@
         left: -10px;
         margin: 0 50%;
     }
+
+    /*media queries*/
+    @media screen and (max-width: 767px){
+        #panorama{
+            width: 130vw;
+        }
+        #controls{
+            display: none;
+        }
+    }
     </style>
 </head>
 <body>
@@ -84,7 +98,7 @@
 
 <script>
 viewer = pannellum.viewer('panorama', {   
-    
+    "hotSpotDebug": true,
     "default": {
         "firstScene": "start",
         "sceneFadeDuration": 1000,
@@ -126,11 +140,12 @@ viewer = pannellum.viewer('panorama', {
                     "type": "scene",
                     "text": "Katedra kvality a strojárskych technológií",
                     "sceneId": "kkstp"
-                }
+                },
+                
             ]
         },
         "studijneodd": {
-            "hfov": 110,
+            "hfov": 120,
             "yaw": -80.48,
             "pitch": -4.64,
             "type": "equirectangular",
@@ -141,11 +156,25 @@ viewer = pannellum.viewer('panorama', {
                     "pitch": -4.64,
                     "type": "scene",
                     "sceneId": "mfcam"
+                },
+                {
+                    "pitch": -9.67,
+                    "yaw": 49.21,
+                    "type": "scene",
+                    "sceneId": "kzsb",
+                    "text": "Katedra zariadení stavieb a bezpečnosti techniky"
+                },
+                {
+                    "pitch": -20.57,
+                    "yaw": 166.52,
+                    "type": "scene",
+                    "sceneId": "start",
+                    "text": "Začiatok prehliadky"
                 }
             ]
         },
         "mfcam":{
-            "hfov": 110,
+            "hfov": 120,
             "yaw": 86.48,
             "pitch": -2.4,
             "type": "equirectangular",
@@ -167,7 +196,7 @@ viewer = pannellum.viewer('panorama', {
             ]
         },
         "mf13":  {
-            "hfov": 110,
+            "hfov": 120,
             "yaw": -113.46,
             "pitch": -1.05,
             "type": "equirectangular",
@@ -196,7 +225,7 @@ viewer = pannellum.viewer('panorama', {
             ]
         },
         "mf13i":{
-            "hfov": 110,
+            "hfov": 120,
             "yaw": -2.19,
             "pitch": -1.74,
             "type": "equirectangular",
@@ -538,7 +567,7 @@ viewer = pannellum.viewer('panorama', {
             ]
         },
         "keaif2":{
-            "hfov": 110,
+            "hfov": 120,
             "yaw": 89.82,
             "pitch": -3.66,
             "type": "equirectangular",
@@ -559,7 +588,7 @@ viewer = pannellum.viewer('panorama', {
             ]
         },
         "keaif3":{
-            "hfov": 110,
+            "hfov": 120,
             "yaw": 93.55,
             "pitch": -3.15,
             "type": "equirectangular",
@@ -580,7 +609,7 @@ viewer = pannellum.viewer('panorama', {
             ]
         },
         "keaif4":{
-            "hfov": 110,
+            "hfov": 120,
             "yaw": 95,
             "pitch": -1.32,
             "type": "equirectangular",
@@ -601,7 +630,7 @@ viewer = pannellum.viewer('panorama', {
             ]
         },
         "keaif5": {
-            "hfov": 110,
+            "hfov": 120,
             "yaw": 95,
             "pitch": -1.32,
             "type": "equirectangular",
@@ -622,7 +651,7 @@ viewer = pannellum.viewer('panorama', {
             ]
         },
         "keaif6": {
-            "hfov": 110,
+            "hfov": 120,
             "yaw": 91.93,
             "pitch": -3.32,
             "type": "equirectangular",
@@ -643,7 +672,7 @@ viewer = pannellum.viewer('panorama', {
             ]
         },
         "keaif7": {
-            "hfov": 110,
+            "hfov": 120,
             "yaw": 89.9,
             "pitch": -2.83,
             "type": "equirectangular",
