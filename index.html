@@ -7,7 +7,7 @@
     <title>VirtualTourSPUTF</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-
+</head>
     <style>
         body{
             margin: 0;
@@ -101,12 +101,133 @@
 viewer = pannellum.viewer('panorama', {   
     "hotSpotDebug": true,
     "default": {
-        "firstScene": "start",
+        "firstScene": "vchod",
         "sceneFadeDuration": 1000,
         "autoLoad": true
     },
 
     "scenes": {
+        "vchod":{
+            "hfov": 110,
+            "pitch": -3.41,
+            "yaw": 178.09,
+            "type": "equirectangular",
+            "panorama": "images/build/vchod.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -15.69,
+                    "yaw": 177.05,
+                    "type": "scene",
+                    "sceneId": "priz"
+                }
+            ]
+        },
+        "priz": {
+            "hfov": 110,
+            "pitch": -3.41,
+            "yaw": 178.09,
+            "type": "equirectangular",
+            "panorama": "images/build/prizemie.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -14.08,
+                    "yaw": 149.87,
+                    "type": "scene",
+                    "sceneId": "start",
+                    "text": "1. Poschodie"
+                },
+                {
+                    "pitch": 1.27,
+                    "yaw": 173,
+                    "type": "info",
+                    "text": "Rozcestník pre učebne so zaujímavým vybavením"
+                },
+                {
+                    "pitch": -3.3,
+                    "yaw": 165,
+                    "type": "scene",
+                    "sceneId": "mf02",
+                    "text": "Učebňa MF02"
+                },
+                {
+                    "pitch": -3.3,
+                    "yaw": 173,
+                    "type": "scene",
+                    "sceneId": "mf04",
+                    "text": "Učebňa MF04"
+                },
+                {
+                    "pitch": -3.3,
+                    "yaw": -179,
+                    "type": "scene",
+                    "sceneId": "mf14i",
+                    "text": "Učebňa MF14"
+                },
+                {
+                    "pitch": -9.3,
+                    "yaw": 165,
+                    "type": "scene",
+                    "sceneId": "mf21",
+                    "text": "Učebňa MF21"
+                },
+                {
+                    "pitch": -9.3,
+                    "yaw": 173,
+                    "type": "scene",
+                    "sceneId": "mf22",
+                    "text": "Učebňa MF22"
+                },
+                {
+                    "pitch": -9.3,
+                    "yaw": -179,
+                    "type": "scene",
+                    "sceneId": "mf23",
+                    "text": "Učebňa MF23"
+                },
+                {
+                    "pitch": -15.3,
+                    "yaw": 165,
+                    "type": "scene",
+                    "sceneId": "mf24",
+                    "text": "Učebňa MF24"
+                },
+                {
+                    "pitch": -15.3,
+                    "yaw": 173,
+                    "type": "scene",
+                    "sceneId": "mf25",
+                    "text": "Učebňa MF25"
+                },
+                {
+                    "pitch": -15.3,
+                    "yaw": -179,
+                    "type": "scene",
+                    "sceneId": "mf26",
+                    "text": "Učebňa MF26"
+                },
+                {
+                    "pitch": -21.3,
+                    "yaw": 165,
+                    "type": "scene",
+                    "sceneId": "mps",
+                    "text": "Miestnosť pre študentov"
+                },
+                {
+                    "pitch": -21.3,
+                    "yaw": 173,
+                    "type": "scene",
+                    "sceneId": "garaz1",
+                    "text": "Učebňa garaž1"
+                },
+                {
+                    "pitch": -21.3,
+                    "yaw": -179,
+                    "type": "scene",
+                    "sceneId": "garaz2",
+                    "text": "Učebňa garaž2"
+                },
+            ]
+        },
         "start": {
             "hfov": 110,
             "pitch": 7.06,
@@ -125,8 +246,8 @@ viewer = pannellum.viewer('panorama', {
                     "pitch": -8.7,
                     "yaw": 10.3,
                     "type": "scene",
-                    "text": "Katedra elektrotechniky automatizácie a informatiky",
-                    "sceneId": "keaif1"
+                    "text": "2. Poschodie",
+                    "sceneId": "keaif0"
                 },
                 {
                     "pitch": -4.66,
@@ -136,41 +257,41 @@ viewer = pannellum.viewer('panorama', {
                     "sceneId": "kzsb"
                 },
                 {
-                    "pitch": -9.79,
-                    "yaw": 18.73,
+                    "pitch": -21.069,
+                    "yaw": -10.91,
                     "type": "scene",
-                    "text": "Katedra kvality a strojárskych technológií",
-                    "sceneId": "kkstp"
-                },
+                    "text": "Prízemie",
+                    "sceneId": "priz"
+                }
                 
             ]
         },
-        "studijneodd": {
-            "hfov": 110,
-            "yaw": -80.48,
-            "pitch": -4.64,
-            "type": "equirectangular",
-            "panorama": "images/build/foto-002.jpg",
-            "hotSpots":[
+        "studijneodd": {   
+            "hfov": 110,   
+            "yaw": -80.48, 
+            "pitch": -4.64, 
+            "type": "equirectangular", 
+            "panorama": "images/build/foto-002.jpg", 
+            "hotSpots":[ 
                 {
                     "yaw": -80.48,
                     "pitch": -4.64,
-                    "type": "scene",
-                    "sceneId": "mfcam"
+                    "type": "scene", 
+                    "sceneId": "mfcam" 
                 },
                 {
                     "pitch": -9.67,
                     "yaw": 49.21,
                     "type": "scene",
                     "sceneId": "kzsb",
-                    "text": "Katedra zariadení stavieb a bezpečnosti techniky"
+                    "text": "Katedra zariadení stavieb a bezpečnosti techniky" 
                 },
                 {
                     "pitch": -20.57,
                     "yaw": 166.52,
                     "type": "scene",
                     "sceneId": "start",
-                    "text": "Začiatok prehliadky"
+                    
                 }
             ]
         },
@@ -275,7 +396,7 @@ viewer = pannellum.viewer('panorama', {
                     "pitch": 3.13,
                     "yaw": 96.5,
                     "type": "scene",
-                    "sceneId": "schodiste3",
+                    "sceneId": "schodiste2",
                 }
             ]
         },
@@ -298,6 +419,35 @@ viewer = pannellum.viewer('panorama', {
                     "yaw": 80.2,
                     "type": "scene",                    
                     "sceneId": "mf15"
+                },
+                {
+                    "pitch": -7.17,
+                    "yaw": -6.12,
+                    "type": "scene",                    
+                    "sceneId": "mf14i"
+                }
+            ] 
+        },
+        "mf14i":{
+            "hfov": 110,
+            "yaw": 3.95,
+            "pitch": 0.53,
+            "type": "equirectangular",
+            "panorama": "images/build/MF14i.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4.91,
+                    "yaw": -127.79,
+                    "type": "scene",
+                    "text": "Návrat na chodbu",                    
+                    "sceneId": "mf14"
+                },
+                {
+                    "pitch": -5.35,
+                    "yaw": -121.49,
+                    "type": "scene",                    
+                    "sceneId": "priz",
+                    "text": "Návrat na rozcestník"
                 }
             ] 
         },
@@ -377,6 +527,13 @@ viewer = pannellum.viewer('panorama', {
                     "yaw": -174.35,
                     "type": "scene",                    
                     "sceneId": "schodiste1"
+                },
+                {
+                    "pitch": -4.38,
+                    "yaw": -168.58,
+                    "type": "scene",                    
+                    "sceneId": "priz",
+                    "text": "Návrat na rozcestník"
                 }
             ]
         },
@@ -392,6 +549,61 @@ viewer = pannellum.viewer('panorama', {
                     "yaw": 154.96,
                     "type": "scene",                    
                     "sceneId": "schodiste1"
+                },
+                {
+                    "pitch": -7.16,
+                    "yaw": 161.23,
+                    "type": "scene",                    
+                    "sceneId": "priz",
+                    "text": "Návrat na rozcestník"
+                }
+            ]
+        },
+        "mf02":{
+            "hfov": 110,
+            "pitch": -2.58,
+            "yaw": -173.16,
+            "type": "equirectangular",
+            "panorama": "images/build/MF02.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5.42,
+                    "yaw": 148.92,
+                    "type": "scene",                    
+                    "sceneId": "priz",
+                    "text": "Návrat na rozcestník"
+                }
+            ]
+        },
+        "mf04":{
+            "hfov": 110,
+            "pitch": -0.22,
+            "yaw": -2.03,
+            "type": "equirectangular",
+            "panorama": "images/build/MF04.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5.69,
+                    "yaw": -146.09,
+                    "type": "scene",                    
+                    "sceneId": "priz",
+                    "text": "Návrat na rozcestník"
+                }
+            ]
+        },
+        "mps":{
+            "hfov": 110,
+            "pitch": -3.06,
+            "yaw": -9.19,
+            "type": "equirectangular",
+            "panorama": "images/build/mps.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -8.46,
+                    "yaw": 71.99,
+                    "type": "scene",                    
+                    "sceneId": "priz",
+                    "text": "Návrat na rozcestník"
                 }
             ]
         },
@@ -533,14 +745,47 @@ viewer = pannellum.viewer('panorama', {
                     "pitch": -3.66,
                     "yaw": 89.82,
                     "type": "scene",
-                    "text": "Návrat na začiatok",
+                    "text": "Návrat na prvé poschodie",
                     "sceneId": "start"
                 },
                 {
                     "pitch": -0.73,
                     "yaw": -88.73,
                     "type": "scene",
-                    "text": "Návrat na začiatok",
+                    "sceneId": "kzsb6"
+                }
+            ]
+        },
+        "keaif0":{
+            "hfov": 110,
+            "yaw": -41.06,
+            "pitch": -2.19,
+            "type": "equirectangular",
+            "panorama": "images/build/keaif0.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.2,
+                    "yaw": -93.88,
+                    "type": "scene",
+                    "sceneId": "kkstp",
+                    "text": "Katedra kvality a strojárskych technológií"
+                },
+                {
+                    "pitch": -5.26,
+                    "yaw": 10.16,
+                    "type": "scene",
+                    "sceneId": "keaif1",
+                    "text": "Katedra elektrotechniky, automatizácie a informatiky"
+                },
+                {
+                    "pitch": -4.51,
+                    "yaw": -66.35,
+                    "type": "scene",
+                    "sceneId": "mf21c"
+                },
+                {    "pitch": -17.03,
+                    "yaw": -119.11,
+                    "type": "scene",
                     "sceneId": "start"
                 }
             ]
@@ -563,7 +808,7 @@ viewer = pannellum.viewer('panorama', {
                     "yaw": -88.73,
                     "type": "scene",
                     "text": "1. Poschodie",
-                    "sceneId": "start"
+                    "sceneId": "keaif0"
                 }
             ]
         },
@@ -710,7 +955,343 @@ viewer = pannellum.viewer('panorama', {
                     "pitch": -0.57,
                     "yaw": 87.82,
                     "type": "scene",
-                    "sceneId": "start"
+                    "sceneId": "keaif0",
+                    "text": "Návrat na 2. poschodie"
+                }
+            ]
+        },
+        "mf21c":{
+            "hfov": 110,
+            "yaw": 87.54,
+            "pitch": -4.82,
+            "type": "equirectangular",
+            "panorama": "images/build/mf21c.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.61,
+                    "yaw": 2.46,
+                    "type": "scene",
+                    "sceneId": "mf21i"
+                },
+                {
+                    "pitch": -3.13,
+                    "yaw": -78.68,
+                    "type": "scene",
+                    "sceneId": "keaif0"
+                },
+                {
+                    "pitch": -2.22,
+                    "yaw": 90.51,
+                    "type": "scene",
+                    "sceneId": "mf22c"
+                }
+            ]
+        },
+        "mf22c":{
+            "hfov": 110,
+            "yaw": 87.54,
+            "pitch": -4.82,
+            "type": "equirectangular",
+            "panorama": "images/build/mf22c.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.61,
+                    "yaw": 2.46,
+                    "type": "scene",
+                    "sceneId": "mf22i"
+                },
+                {
+                    "pitch": -2.08,
+                    "yaw": -81.38,
+                    "type": "scene",
+                    "sceneId": "mf21c"
+                },
+                {
+                    "pitch": -2.26,
+                    "yaw": 86.52,
+                    "type": "scene",
+                    "sceneId": "mf23c"
+                }
+            ]
+        },
+        "mf23c":{
+            "hfov": 110,
+            "yaw": 87.54,
+            "pitch": -4.82,
+            "type": "equirectangular",
+            "panorama": "images/build/mf23c.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.61,
+                    "yaw": 2.46,
+                    "type": "scene",
+                    "sceneId": "mf23i"
+                },
+                {
+                    "pitch": -1.17,
+                    "yaw": -82.98,
+                    "type": "scene",
+                    "sceneId": "mf22c"
+                },
+                {
+                    "pitch": -3.17,
+                    "yaw": 82.63,
+                    "type": "scene",
+                    "sceneId": "schodiste2"
+                }
+            ]
+        },
+        "schodiste2":{
+            "hfov": 110,
+            "yaw": 3.19,
+            "pitch": -4.92,
+            "type": "equirectangular",
+            "panorama": "images/build/schodiste2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -24.95,
+                    "yaw": 94.35,
+                    "type": "scene",
+                    "sceneId": "schodiste1"
+                },
+                {
+                    "pitch": -8.72,
+                    "yaw": 124.59,
+                    "type": "scene",
+                    "sceneId": "schodiste3"
+                },
+                {
+                    "pitch": -9.34,
+                    "yaw": -44.3,
+                    "type": "scene",
+                    "sceneId": "mf23c"
+                },
+                {
+                    "pitch": -7.03,
+                    "yaw": 48.45,
+                    "type": "scene",
+                    "sceneId": "mf24c"
+                }
+            ]
+        },
+        "mf24c":{
+            "hfov": 110,
+            "yaw": 87.54,
+            "pitch": -4.82,
+            "type": "equirectangular",
+            "panorama": "images/build/mf24c.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.61,
+                    "yaw": 2.46,
+                    "type": "scene",
+                    "sceneId": "mf24i"
+                },
+                {
+                    "pitch": -1.17,
+                    "yaw": -82.98,
+                    "type": "scene",
+                    "sceneId": "schodiste2"
+                },
+                {
+                    "pitch": -2.06,
+                    "yaw": 86.38,
+                    "type": "scene",
+                    "sceneId": "mf25c"
+                }
+                
+            ]
+        },
+        "mf25c":{
+            "hfov": 110,
+            "yaw": 87.54,
+            "pitch": -4.82,
+            "type": "equirectangular",
+            "panorama": "images/build/mf25c.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.61,
+                    "yaw": 2.46,
+                    "type": "scene",
+                    "sceneId": "mf25i"
+                },
+                {
+                    "pitch": -1.17,
+                    "yaw": -82.98,
+                    "type": "scene",
+                    "sceneId": "mf24c"
+                },
+                {
+                    "pitch": -3.36,
+                    "yaw": 89.71,
+                    "type": "scene",
+                    "sceneId": "mf26c"
+                }
+            ]
+        },
+        "mf26c":{
+            "hfov": 110,
+            "yaw": 87.54,
+            "pitch": -4.82,
+            "type": "equirectangular",
+            "panorama": "images/build/mf26c.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.61,
+                    "yaw": 2.46,
+                    "type": "scene",
+                    "sceneId": "mf26i"
+                },
+                {
+                    "pitch": -1.17,
+                    "yaw": -82.98,
+                    "type": "scene",
+                    "sceneId": "mf25c"
+                },
+                {
+                    "pitch": -3.17,
+                    "yaw": 82.63,
+                    "type": "scene",
+                    "sceneId": "keaif0",
+                    "text": "Návrat na druhé poschodie"
+                }
+            ]
+        },
+        "mf21i": {
+            "hfov": 110,
+            "pitch": -1.72,
+            "yaw": -15.72,
+            "type": "equirectangular",
+            "panorama": "images/build/MF21.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5.27,
+                    "yaw": -111.43,
+                    "type": "scene",
+                    "text": "Návrat na chodbu",
+                    "sceneId": "mf21c"
+                },
+                {
+                    "pitch": -5.95,
+                    "yaw": -103.8,
+                    "type": "scene",
+                    "text": "Návrat na rozcestník",
+                    "sceneId": "priz"
+                }
+            ]
+        },
+        "mf22i": {
+            "hfov": 110,
+            "pitch": -1.72,
+            "yaw": -15.72,
+            "type": "equirectangular",
+            "panorama": "images/build/MF22.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5.21,
+                    "yaw": -122.88,
+                    "type": "scene",
+                    "text": "Návrat na chodbu",
+                    "sceneId": "mf22c"
+                },
+                {
+                    "pitch": -5.13,
+                    "yaw": -115.53,
+                    "type": "scene",
+                    "text": "Návrat na rozcestník",
+                    "sceneId": "priz"
+                }
+            ]
+        },
+        "mf23i": {
+            "hfov": 110,
+            "pitch": -3.61,
+            "yaw": -174.68,
+            "type": "equirectangular",
+            "panorama": "images/build/MF23.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5.93,
+                    "yaw": -47.57,
+                    "type": "scene",
+                    "text": "Návrat na chodbu",
+                    "sceneId": "mf23c"
+                },
+                {
+                    "pitch": -5.34,
+                    "yaw": -39.9,
+                    "type": "scene",
+                    "text": "Návrat na rozcestník",
+                    "sceneId": "priz"
+                }
+            ]
+        },
+        "mf24i": {
+            "hfov": 110,
+            "pitch": -4.01,
+            "yaw": -174.91,
+            "type": "equirectangular",
+            "panorama": "images/build/MF24.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5.69,
+                    "yaw": -134.54,
+                    "type": "scene",
+                    "text": "Návrat na chodbu",
+                    "sceneId": "mf24c"
+                },
+                {
+                    "pitch": -5.54,
+                    "yaw": -128.06,
+                    "type": "scene",
+                    "text": "Návrat na rozcestník",
+                    "sceneId": "priz"
+                }
+            ]
+        },
+        "mf25i": {
+            "hfov": 110,
+            "pitch": -0.82,
+            "yaw": 7.92,
+            "type": "equirectangular",
+            "panorama": "images/build/MF25.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7.39,
+                    "yaw": -87.67,
+                    "type": "scene",
+                    "text": "Návrat na chodbu",
+                    "sceneId": "mf25c"
+                },
+                {
+                    "pitch": -7.33,
+                    "yaw": -73.94,
+                    "type": "scene",
+                    "text": "Návrat na rozcestník",
+                    "sceneId": "priz"
+                }
+            ]
+        },
+        "mf26i": {
+            "hfov": 110,
+            "pitch": -2.34,
+            "yaw": 3.17,
+            "type": "equirectangular",
+            "panorama": "images/build/MF26.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -8.54,
+                    "yaw": 103.12,
+                    "type": "scene",
+                    "text": "Návrat na chodbu",
+                    "sceneId": "mf26c"
+                },
+                {
+                    "pitch": -7.95,
+                    "yaw": 117.94,
+                    "type": "scene",
+                    "text": "Návrat na rozcestník",
+                    "sceneId": "priz"
                 }
             ]
         },
@@ -725,8 +1306,8 @@ viewer = pannellum.viewer('panorama', {
                     "pitch": -18.79,
                     "yaw": -114.09,
                     "type": "scene",
-                    "text": "Katedra elektrotechniky automatizácie a informatiky",
-                    "sceneId": "keaif1"
+                    "text": "2. Poschodie",
+                    "sceneId": "keaif0"
                 },
                 {
                     "pitch": -12.68,
@@ -891,7 +1472,8 @@ viewer = pannellum.viewer('panorama', {
                     "yaw": -91.95,
                     "pitch": -2.26,
                     "type": "scene",
-                    "sceneId": "kkstp"
+                    "sceneId": "kkstp",
+                    "text": "Návrat na 3. poschodie"
                 }
             ]
         },
@@ -987,7 +1569,7 @@ viewer = pannellum.viewer('panorama', {
                     "yaw": 123.86,
                     "pitch": -22.05,
                     "type": "scene",
-                    "sceneId": "schodiste1"
+                    "sceneId": "schodiste2"
                 }
             ]
         },
@@ -1044,7 +1626,8 @@ viewer = pannellum.viewer('panorama', {
                     "yaw": -5.15,
                     "pitch": -4.92,
                     "type": "scene",
-                    "sceneId": "kkstp"
+                    "sceneId": "kkstp",
+                    "text": "3. poschodie"
                 },
                 {
                     "yaw": 23.27,
@@ -1155,7 +1738,8 @@ viewer = pannellum.viewer('panorama', {
                     "pitch": -4.18,
                     "yaw": -84.85,
                     "type": "scene",
-                    "sceneId": "ksp"
+                    "sceneId": "ksp",
+                    "text": "Návrat na 4. poschodie"
                 },
                 {
                     "pitch": -0.57,
@@ -1239,7 +1823,7 @@ viewer = pannellum.viewer('panorama', {
     },
 });
 
-/* Hotspot function */
+
 
 function hotspot(hotSpotDiv, args) {
     hotSpotDiv.classList.add('custom-tooltip');
@@ -1254,7 +1838,6 @@ function hotspot(hotSpotDiv, args) {
 // controls arrow up
 document.getElementById('pan-up').addEventListener('click', function(e) {
     viewer.setPitch(viewer.getPitch() + 10);
-    console.log(e);
 });
 document.getElementById('pan-down').addEventListener('click', function(e) {
     viewer.setPitch(viewer.getPitch() - 10);
