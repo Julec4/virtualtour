@@ -5,85 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VirtualTourSPUTF</title>
+
+    <link rel="stylesheet" href="/main.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&display=swap" rel="stylesheet"> 
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 </head>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-        }
-        #panorama {
-            width: 50rem;
-            height: 40rem;
-        }
 
-        #controls {
-        position: absolute;
-        bottom: 0;
-        z-index: 2;
-        text-align: center;
-        width: 100%;
-        padding-bottom: 3px;
-    }
-    .ctrl {
-        padding: 8px 5px;
-        width: 30px;
-        text-align: center;
-        background: rgba(200, 200, 200, 0.8);
-        display: inline-block;
-        cursor: pointer;
-    }
-    .ctrl:hover {
-        background: rgba(200, 200, 200, 1);
-    }
-
-    .custom-hotspot {
-        height: 50px;
-        width: 50px;
-        background: #f00;
-    }
-    div.custom-tooltip span {
-        visibility: hidden;
-        position: absolute;
-        border-radius: 3px;
-        background-color: #fff;
-        color: #000;
-        text-align: center;
-        max-width: 200px;
-        padding: 5px 10px;
-        margin-left: -220px;
-        cursor: default;
-    }
-    div.custom-tooltip:hover span{
-        visibility: visible;
-    }
-    div.custom-tooltip:hover span:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-width: 10px;
-        border-style: solid;
-        border-color: #fff transparent transparent transparent;
-        bottom: -20px;
-        left: -10px;
-        margin: 0 50%;
-    }
-
-    /*media queries*/
-    @media screen and (max-width: 767px){
-        #panorama{
-            width: 100vw;
-    
-        }
-        #controls{
-            display: none;
-        }
-    }
-    </style>
-</head>
 <body>
+<h2>Virtuálna prehliadka Technickej fakulty SPU v Nitre</h2>
 <div id="panorama">
     <div id="controls">
         <div class="ctrl" id="pan-up">&#9650;</div>
@@ -98,8 +33,7 @@
 
 
 <script>
-viewer = pannellum.viewer('panorama', {   
-    "hotSpotDebug": true,
+viewer = pannellum.viewer('panorama', {  
     "default": {
         "firstScene": "vchod",
         "sceneFadeDuration": 1000,
@@ -167,7 +101,7 @@ viewer = pannellum.viewer('panorama', {
                     "pitch": -9.3,
                     "yaw": 165,
                     "type": "scene",
-                    "sceneId": "mf21",
+                    "sceneId": "mf21i",
                     "text": "Učebňa MF21"
                 },
                 {
@@ -1838,6 +1772,7 @@ function hotspot(hotSpotDiv, args) {
 // controls arrow up
 document.getElementById('pan-up').addEventListener('click', function(e) {
     viewer.setPitch(viewer.getPitch() + 10);
+    
 });
 document.getElementById('pan-down').addEventListener('click', function(e) {
     viewer.setPitch(viewer.getPitch() - 10);
